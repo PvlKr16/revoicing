@@ -1,0 +1,14 @@
+чтобы работало, надо на комп установить ffmpeg:
+Linux: sudo apt install ffmpeg
+Windows: https://github.com/BtbN/FFmpeg-Builds/releases
+
+Как добавить в PATH:
+
+Добавьте FFmpeg в PATH:
+
+Найдите папку bin внутри директории, куда вы установили FFmpeg (например, C:\ffmpeg\bin).
+Добавьте её в системный PATH:
+Откройте "Поиск" → введите "Изменить переменные среды".
+Нажмите "Изменить" → выберите Path → "Изменить".
+Нажмите "Добавить" → укажите путь к C:\ffmpeg\bin.
+проверка: ffmpeg -version
