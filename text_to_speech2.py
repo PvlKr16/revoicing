@@ -1,3 +1,4 @@
+import os
 import re
 from pydub import AudioSegment
 # from pydub.effects import crossfade
@@ -27,12 +28,14 @@ async def generate_speech(text, output_path, voice="es-ES-AlvaroNeural"):
 # Function to synthesize audio with timing
 def synthesize_audio_with_timing(transcription, output_file, fade_duration=200):
     combined_audio = AudioSegment.silent(duration=0)  # Start with silence
+    temp_files = []
 
     for i, (start_time, text) in enumerate(transcription):
         segment_start = start_time * 1000  # Convert to milliseconds
 
         # Generate audio for the current segment
         temp_audio_file = f"temp_segment_{i}.mp3"
+        temp_files.append(temp_audio_file)
         asyncio.run(generate_speech(text, temp_audio_file))
 
         # Load the generated audio
@@ -48,6 +51,11 @@ def synthesize_audio_with_timing(transcription, output_file, fade_duration=200):
 
     # Export the final audio to an MP3 file
     combined_audio.export(output_file, format="mp3")
+
+    # Remove temporary files
+    for temp_file in temp_files:
+        if os.path.exists(temp_file):
+            os.remove(temp_file)
 
 # Main function
 if __name__ == "__main__":
