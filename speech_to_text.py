@@ -5,8 +5,9 @@ from time import gmtime, strftime
 translator = Translator()
 
 # Укажите путь к вашему MP3 файлу
-audio_file_path = "extracted_audio.mp3"
+# audio_file_path = "extracted_audio.mp3"
 # audio_file_path = "output_audio.mp3"
+audio_file_path = "output_audio_new.mp3"
 
 
 # Загружаем модель Whisper
