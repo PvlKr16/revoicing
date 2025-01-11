@@ -59,7 +59,7 @@ def synthesize_audio_with_timing(transcription, output_file, fade_duration=200):
 
 # Main function
 if __name__ == "__main__":
-    transcription_file = "2025-01-07_17-48-49 output_audio_with_timestamps.txt"  # Input file path
+    transcription_file = "2025-01-09_20-49-43 output_audio_with_timestamps.txt"  # Input file path
     output_mp3_file = "output_audio.mp3"  # Output MP3 file path
 
     # Parse the transcription file
