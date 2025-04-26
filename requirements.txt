@@ -1,5 +1,9 @@
 # whisper~=1.1.10
-openai-whisper
+openai-whisper~=20240930
 googletrans~=3.1.0a0
 pydub~=0.25.1
 edge-tts~=7.0.0
+whisper~=1.1.10
+# SpeechRecognition~=3.13.0
+torchaudio~=2.5.1
+torch~=2.5.1
