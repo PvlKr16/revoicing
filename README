@@ -1,3 +1,6 @@
+перевод аудио с одного языка на другой:
+распознавание текста в исходном файле, перевод текста, озвучивание перевода
+
 чтобы работало, надо на комп установить ffmpeg:
 Linux: sudo apt install ffmpeg
 Windows: https://github.com/BtbN/FFmpeg-Builds/releases
